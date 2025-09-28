@@ -36,8 +36,8 @@ export const AlertsPage = () => {
     const fetchData = async () => {
       try {
         const [alertsRes, countsRes] = await Promise.all([
-          fetch("http://localhost:3000/api/v1/calculate/alert"),
-          fetch("http://localhost:3000/api/v1/calculate/count"),
+          fetch(`${import.meta.env.VITE_BASE_URL}/api/v1/calculate/alert`),
+          fetch(`${import.meta.env.VITE_BASE_URL}/api/v1/calculate/count`),
         ])
 
         if (!alertsRes.ok || !countsRes.ok) {

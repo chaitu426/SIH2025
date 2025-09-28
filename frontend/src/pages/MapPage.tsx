@@ -28,9 +28,9 @@ export const MapPage = () => {
   const fetchData = async () => {
     try {
       const [sitesRes, countRes, alertRes] = await Promise.all([
-        fetch("http://localhost:3000/api/v1/calculate"),
-        fetch("http://localhost:3000/api/v1/calculate/count"),
-        fetch("http://localhost:3000/api/v1/calculate/alert")
+        fetch(`${import.meta.env.VITE_BASE_URL}/api/v1/calculate`),
+        fetch(`${import.meta.env.VITE_BASE_URL}/api/v1/calculate/count`),
+        fetch(`${import.meta.env.VITE_BASE_URL}/api/v1/calculate/alert`)
       ])
 
       const sitesData = await sitesRes.json()

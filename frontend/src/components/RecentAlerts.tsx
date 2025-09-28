@@ -22,7 +22,7 @@ export const RecentAlerts = () => {
     const fetchAlerts = async () => {
       try {
         setLoading(true)
-        const res = await fetch("http://localhost:3000/api/v1/calculate/alert")
+        const res = await fetch(`${import.meta.env.VITE_BASE_URL}/api/v1/calculate/alert`)
         const data = await res.json()
         setAlerts(data)
       } catch (err) {
