@@ -6,7 +6,7 @@
     "outDir": "./dist",
     "module": "ESNext",
     "target": "es2022",
-    "moduleResolution": "node",
+    "moduleResolution": "Node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     // Other Outputs
